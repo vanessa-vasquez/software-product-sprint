@@ -7,3 +7,11 @@
 #greeting-container {
   margin-top: 20px;
 }
+
+h1 {
+    font-family: 'Oi', cursive;
+}
+
+a {
+    text-align: center;
+}
