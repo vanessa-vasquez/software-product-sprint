@@ -1,0 +1,22 @@
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+}
+
+#greeting-container {
+  margin-top: 20px;
+}
+
+h1 {
+    font-family: 'Oi', cursive;
+    text-align: center; 
+}
+
+p {
+    text-align: center; 
+}
+
+a {
+    text-align: center;
+}
