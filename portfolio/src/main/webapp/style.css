@@ -10,6 +10,11 @@
 
 h1 {
     font-family: 'Oi', cursive;
+    text-align: center; 
+}
+
+p {
+    text-align: center; 
 }
 
 a {
