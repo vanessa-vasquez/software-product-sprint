@@ -20,3 +20,15 @@ async function showSpotifyLink() {
   const spotifyContainer = document.getElementById('spotify-container');
   spotifyContainer.innerText = textFromResponse;
 }
+
+async function showJSON(){
+    const responseFromServer = await fetch('/custom-servlet');
+
+    const myObject = await responseFromServer.json(); 
+
+    console.log(myObject[0]);
+    console.log(myObject[1]);
+    console.log(myObject[2]);
+}
+
+
