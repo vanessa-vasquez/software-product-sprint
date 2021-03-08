@@ -12,17 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Adds a random greeting to the page.
- */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+/** Fetches my spotify playlist from the server and adds it to the page. */
+async function showSpotifyLink() {
+  const responseFromServer = await fetch('/spotify-servlet');
+  const textFromResponse = await responseFromServer.text();
 
-  // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
-  // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  const spotifyContainer = document.getElementById('spotify-container');
+  spotifyContainer.innerText = textFromResponse;
 }
