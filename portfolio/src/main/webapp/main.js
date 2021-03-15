@@ -20,3 +20,33 @@ async function showSpotifyLink() {
   const spotifyContainer = document.getElementById('spotify-container');
   spotifyContainer.innerText = textFromResponse;
 }
+
+async function showJSON(){
+    const responseFromServer = await fetch('/custom-servlet');
+
+    const myObject = await responseFromServer.json(); 
+
+    const funFactContainer = document.getElementById('fun-facts-container');
+    
+    console.log(myObject[0]);
+
+    funFactContainer.innerHTML = '';
+
+    funFactContainer.appendChild(createListElement(myObject[0]));    
+}
+
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}
+
+/** Creates a map and adds it to the page. */
+function createMap() {
+  const map = new google.maps.Map(
+      document.getElementById('map'),
+      {center: {lat: 37.422, lng: -122.084}, zoom: 16});
+}
+
+
