@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="UTF-8">
     <title>Vanessa's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Oi&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oi&display=swap" rel="stylesheet">    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlHHoIhJBBiN215AuA8R3qRR66ZgkigME"></script>
+    <link rel="stylesheet" href="portfolio_styling.css">
     <script src="main.js"></script>
   </head>
-  <body style="background-color: #FFEBCD;">
+
+  <body onload="createMap();" style="background-color: #FFEBCD;">
     <div id="content">
       <h1>Vanessa's Portfolio</h1>
+      
       <p><a href="https://github.com/vanessa-vasquez">My GitHub</a></p>
+      
       <p>(fyi, the picture is not my pet bird, but they do look pretty similar to mine!)</p>
+      
       <p>Welcome to my page!</p>
+
       <p>A little bit about me, I grew up in Sunset Park, Brooklyn which is basically a HUB for different hispanic cultures! If you ever head down, you should definitely visit! Currently, I go to Columbia University where I study Computer Science with a minor in French and Francophone Studies! </p>
+
       <p><img src="/images/sunset_park.jpg" width="600" height="400"/></p>
+      
       <h1> Current Hobbies </h1>
       <ul>
           <li>I've really been loving playing this game called Little Nightmares. It's super popular right now and the streams for it are always hilarious if you would rather enjoy watching it. As a horror fanatic, this game checks all the boxes!</li>
@@ -25,11 +34,19 @@
           <li>Listening to music - although, my music range is a mess. It's everything from pop punk to Aretha Franklin. Lol, I guess everything has its place. </li>
           <li>Being a bird mom to my green cheek conure Bailey</li>
       </ul>
+
+      <div id="map"></div>
+
       <p>Click <a href="/hello">here</a> to see content created by server code.</p>
+
       <p>Click <button onclick="showJSON()">here</button> to get a fun fact.</p>
+
       <p id="fun-fact-container"></p>
+
       <button onclick="showSpotifyLink();">Click me for a link to my spotify playlist!</button>
+
       <p id="spotify-container"></p>
+
       <form action="/form-handler" method="POST">
       <h1> Contact Me</h1>
       <p>Say hello!</p>
@@ -37,8 +54,9 @@
       <br/>
       <textarea name="msg-input">Please enter your message.</textarea>
       <br/>
-      <input type="submit" />
+      <input type="submit"/>
       </form>
+
     </div>
   </body>
 </html>

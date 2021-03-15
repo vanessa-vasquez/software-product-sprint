@@ -26,9 +26,27 @@ async function showJSON(){
 
     const myObject = await responseFromServer.json(); 
 
+    const funFactContainer = document.getElementById('fun-facts-container');
+    
     console.log(myObject[0]);
-    console.log(myObject[1]);
-    console.log(myObject[2]);
+
+    funFactContainer.innerHTML = '';
+
+    funFactContainer.appendChild(createListElement(myObject[0]));    
+}
+
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}
+
+/** Creates a map and adds it to the page. */
+function createMap() {
+  const map = new google.maps.Map(
+      document.getElementById('map'),
+      {center: {lat: 37.422, lng: -122.084}, zoom: 16});
 }
 
 
